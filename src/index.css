@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Tiny5&display=swap");
+
+:root {
+  --color-bg-dark: #24182c;
+  --color-shadow-dark: #120a18;
+  --color-text-light: #fff1d6;
+  --color-accent-gold: #ffd66b;
+  --color-pure-white: #ffffff;
+  --color-shadow-floor: rgba(18, 10, 24, 0.35);
+
+  --font-logo: "Tiny5", monospace;
+  --font-pixel: "Silkscreen", monospace;
+
+  --pixel-border-shadow:
+    0 -4px 0 0 var(--color-text-light), 0 4px 0 0 var(--color-text-light),
+    -4px 0 0 0 var(--color-text-light), 4px 0 0 0 var(--color-text-light),
+    0 -8px 0 0 var(--color-shadow-dark), 0 8px 0 0 var(--color-shadow-dark),
+    -8px 0 0 0 var(--color-shadow-dark), 8px 0 0 0 var(--color-shadow-dark),
+    -4px -4px 0 0 var(--color-shadow-dark),
+    4px -4px 0 0 var(--color-shadow-dark),
+    -4px 4px 0 0 var(--color-shadow-dark), 4px 4px 0 0 var(--color-shadow-dark);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.portfolio-background {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+  position: relative;
+  z-index: 0;
+}
