@@ -1,0 +1,220 @@
+.menuPrincipal {
+  position: absolute;
+  inset: 0;
+}
+
+/* ------------------------- HEADER ------------------------- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 30px;
+  max-height: 90px;
+}
+
+.header .tituloHeader {
+  padding: 10px 15px;
+  font-family: var(--font-logo);
+  background-color: rgba(36, 24, 44, 0.85);
+  color: var(--color-text-light);
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: default;
+
+  box-shadow:
+    var(--pixel-border-shadow),
+    0 16px 0 0 var(--color-shadow-floor);
+}
+
+.header .tituloHeader span {
+  font-family: var(--font-pixel);
+  background-color: #342a4a;
+  padding: 5px 10px;
+  color: #c4b2f7;
+  font-size: 11px;
+}
+
+.header .linksContainer {
+  display: flex;
+  gap: 30px;
+}
+
+.header .linksContainer .linkSocial {
+  padding: 10px 20px;
+  background-color: rgba(36, 24, 44, 0.85);
+  text-decoration: none;
+  color: var(--color-text-light);
+  font-family: var(--font-pixel);
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: ease-in-out 0.2s;
+
+  box-shadow:
+    var(--pixel-border-shadow),
+    0 16px 0 0 var(--color-shadow-floor);
+}
+
+.header .linksContainer .linkSocial:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    var(--pixel-border-shadow),
+    0 22px 0 0 var(--color-shadow-floor);
+}
+
+.header .linksContainer .linkSocial svg {
+  height: 30px;
+  fill: #c4b2f7;
+}
+
+/* ------------------------- MENU SECTION ------------------------- */
+.sectionMenu {
+  background-color: rgba(36, 24, 44, 0.85);
+  max-width: 600px;
+  margin: 30px auto 0;
+  position: relative;
+  padding: 30px 25px;
+
+  box-shadow:
+    var(--pixel-border-shadow),
+    0 16px 0 0 var(--color-shadow-floor);
+}
+
+.sectionMenu .tituloMenu {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-accent-gold);
+  font-size: 11px;
+  padding: 6px 15px;
+  font-family: var(--font-logo);
+  letter-spacing: 3px;
+
+  box-shadow:
+    0 -3px 0 0 var(--color-shadow-dark),
+    0 3px 0 0 var(--color-shadow-dark),
+    -3px 0 0 0 var(--color-shadow-dark),
+    3px 0 0 0 var(--color-shadow-dark);
+}
+
+.sectionMenu .listaMenu {
+  list-style: none;
+}
+
+.sectionMenu .listaMenu .itemMenu {
+  display: flex;
+  align-items: center;
+}
+
+.sectionMenu .listaMenu .itemMenu .botaoMenu {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  height: 80px;
+  gap: 10px;
+  padding: 0 80px;
+  cursor: pointer;
+}
+
+.sectionMenu .listaMenu .itemMenu .botaoMenu svg {
+  height: 28px;
+  fill: #c4b2f7;
+}
+
+.sectionMenu .listaMenu .itemMenu .botaoMenu p {
+  font-family: var(--font-logo);
+  color: var(--color-text-light);
+  text-align: left;
+  font-size: 24px;
+}
+
+.sectionMenu .listaMenu .itemMenu .botaoMenu p span {
+  display: block;
+  font-family: var(--font-logo);
+  color: #c4b2f7;
+  font-size: 16px;
+}
+
+.sectionMenu .listaMenu .itemMenu.ativo {
+  box-shadow:
+    0 -3px 0 0 var(--color-accent-gold),
+    0 3px 0 0 var(--color-accent-gold),
+    -3px 0 0 0 var(--color-accent-gold),
+    3px 0 0 0 var(--color-accent-gold),
+    0 6px 6px rgba(253, 216, 53, 0.3),
+    0 0 20px 6px rgba(253, 216, 53, 0.15);
+}
+
+.sectionMenu .listaMenu .itemMenu.ativo .setaAtivo {
+  margin-left: 25px;
+}
+
+.sectionMenu .listaMenu .itemMenu.ativo .botaoMenu {
+  padding: 0 50px;
+}
+
+.sectionMenu .listaMenu .itemMenu.ativo .botaoMenu svg {
+  fill: var(--color-accent-gold);
+}
+
+.sectionMenu .listaMenu .itemMenu.ativo .botaoMenu p {
+  color: var(--color-accent-gold);
+  text-shadow: 0 0 6px rgba(253, 216, 53, 0.6);
+}
+
+.sectionMenu .listaMenu .itemMenu.ativo .botaoMenu p span {
+  color: var(--color-text-light);
+}
+
+.controlesContainer {
+  display: flex;
+  justify-content: space-around;
+  font-family: var(--font-logo);
+  color: #c4b2f7;
+  padding-top: 25px;
+  border-top: 4px solid rgba(196, 178, 247, 0.28);
+  margin-top: 15px;
+}
+
+.controlesContainer .grupoSetas {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.controlesContainer .grupoSetas .setaWrapper {
+  background-color: rgba(255, 241, 214, 0.1);
+  box-shadow:
+    0 -3px 0 0 rgba(255, 241, 214, 0.45),
+    0 3px 0 0 rgba(255, 241, 214, 0.45),
+    -3px 0 0 0 rgba(255, 241, 214, 0.45),
+    3px 0 0 0 rgba(255, 241, 214, 0.45);
+  padding: 0 10px;
+}
+
+.controlesContainer .grupoSetas .setaWrapper svg {
+  height: 25px;
+  fill: var(--color-text-light);
+}
+
+.controlesContainer .grupoEnter {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.controlesContainer .grupoEnter .teclaEnter {
+  background-color: rgba(255, 241, 214, 0.1);
+  box-shadow:
+    0 -3px 0 0 rgba(255, 241, 214, 0.45),
+    0 3px 0 0 rgba(255, 241, 214, 0.45),
+    -3px 0 0 0 rgba(255, 241, 214, 0.45),
+    3px 0 0 0 rgba(255, 241, 214, 0.45);
+  padding: 5px 10px;
+  color: var(--color-text-light);
+}
