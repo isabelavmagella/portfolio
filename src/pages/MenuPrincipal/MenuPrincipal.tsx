@@ -1,5 +1,5 @@
 import styles from "./MenuPrincipal.module.css";
-import videoBg from "../../assets/video/flores.mp4";
+import videoBg from "../../assets/video/flo.mp4";
 import { useEffect, useRef } from "react";
 
 interface MenuPrincipalProps {
