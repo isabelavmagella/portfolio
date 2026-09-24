@@ -1,0 +1,93 @@
+.introSection {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 40px;
+  text-align: center;
+}
+
+.introSection h1 {
+  font-family: var(--font-logo);
+  font-size: 100px;
+  color: var(--color-text-light);
+  text-shadow:
+    -2px -2px 0 var(--color-bg-dark),
+    2px -2px 0 var(--color-bg-dark),
+    -2px 2px 0 var(--color-bg-dark),
+    2px 2px 0 var(--color-bg-dark),
+    5px 6px 0px var(--color-shadow-dark),
+    0px 6px 0px var(--color-shadow-dark);
+}
+
+.introSection .tagPixel {
+  padding: 10px 30px;
+  font-family: var(--font-pixel);
+  font-size: 16px;
+  color: var(--color-text-light);
+  text-align: center;
+  background-color: var(--color-bg-dark);
+  margin-bottom: 15px;
+
+  box-shadow:
+    var(--pixel-border-shadow),
+    0 16px 0 0 var(--color-shadow-floor);
+}
+
+.introSection .btnPixel {
+  padding: 20px 40px;
+  font-family: var(--font-pixel);
+  color: var(--color-accent-gold);
+  font-size: 24px;
+  background-color: var(--color-bg-dark);
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+
+  box-shadow:
+    var(--pixel-border-shadow),
+    0 16px 0 0 var(--color-shadow-floor);
+}
+
+.introSection .btnPixel:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    var(--pixel-border-shadow),
+    0 22px 0 0 var(--color-shadow-floor);
+}
+
+.introSection .btnPixel svg {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(-10px);
+  }
+  60% {
+    transform: translateX(-5px);
+  }
+}
+
+@media (max-width: 475px) {
+  .introSection {
+    padding: 25px;
+  }
+
+  .introSection h1 {
+    font-size: 80px;
+  }
+}
