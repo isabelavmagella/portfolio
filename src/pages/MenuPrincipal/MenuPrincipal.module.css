@@ -94,9 +94,11 @@
   0%,
   100% {
     box-shadow: var(--outline-gold-glow);
+    background-color: var(--color-accent-gold-highlight);
   }
   50% {
     box-shadow: none;
+    background-color: inherit;
   }
 }
 
