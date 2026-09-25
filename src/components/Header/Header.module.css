@@ -45,7 +45,7 @@
   box-shadow: var(--floating-shadow);
 }
 
-.header .linksContainer .linkSocial:hover {
+.header .linksContainer .linkSocial:hover, .header .linksContainer .linkSocial:focus {
   transform: translateY(-6px);
   box-shadow: var(--floating-shadow-hover);
 }

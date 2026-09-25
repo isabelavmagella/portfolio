@@ -52,10 +52,6 @@
   cursor: pointer;
 }
 
-.sectionMenu .listaMenu .itemMenu .botaoMenu:focus {
-  outline: none;
-}
-
 .sectionMenu .listaMenu .itemMenu .botaoMenu svg {
   height: 28px;
   fill: var(--color-purple-light);
