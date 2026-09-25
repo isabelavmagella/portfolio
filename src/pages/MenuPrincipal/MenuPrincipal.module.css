@@ -61,7 +61,6 @@
 
 .sectionMenu .listaMenu .itemMenu .botaoMenu p span {
   display: block;
-  font-family: var(--font-logo);
   color: var(--color-purple-light);
   font-size: 16px;
 }

@@ -27,13 +27,9 @@
   font-family: var(--font-pixel);
   font-size: 16px;
   color: var(--color-text-light);
-  text-align: center;
   background-color: var(--color-bg-dark);
   margin-bottom: 15px;
-
-  box-shadow:
-    var(--pixel-border-shadow),
-    0 16px 0 0 var(--color-shadow-floor);
+  box-shadow: var(--floating-shadow);
 }
 
 .introSection .btnPixel {
@@ -47,17 +43,12 @@
   gap: 20px;
   cursor: pointer;
   transition: ease-in-out 0.2s;
-
-  box-shadow:
-    var(--pixel-border-shadow),
-    0 16px 0 0 var(--color-shadow-floor);
+  box-shadow: var(--floating-shadow);
 }
 
 .introSection .btnPixel:hover {
   transform: translateY(-6px);
-  box-shadow:
-    var(--pixel-border-shadow),
-    0 22px 0 0 var(--color-shadow-floor);
+  box-shadow: var(--floating-shadow-hover);
 }
 
 .introSection .btnPixel svg {
