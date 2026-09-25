@@ -88,9 +88,15 @@
   list-style: none;
 }
 
+/* ------------------------- ESTADO BASE ------------------------- */
 .sectionMenu .listaMenu .itemMenu {
   display: flex;
   align-items: center;
+}
+
+.sectionMenu .listaMenu .itemMenu .setaAtivo {
+  opacity: 0;
+  transition: opacity;
 }
 
 .sectionMenu .listaMenu .itemMenu .botaoMenu {
@@ -101,8 +107,12 @@
   border: none;
   height: 80px;
   gap: 10px;
-  padding: 0 80px;
+  padding: 0 85px;
   cursor: pointer;
+}
+
+.sectionMenu .listaMenu .itemMenu .botaoMenu:focus {
+  outline: none;
 }
 
 .sectionMenu .listaMenu .itemMenu .botaoMenu svg {
@@ -124,12 +134,15 @@
   font-size: 16px;
 }
 
+/* ------------------------- ESTADO ATIVO ------------------------- */
 .sectionMenu .listaMenu .itemMenu.ativo {
-  box-shadow: var(--outline-gold-glow);
+  animation: piscarBorda 1.5s ease-in-out infinite;
 }
 
 .sectionMenu .listaMenu .itemMenu.ativo .setaAtivo {
-  margin-left: 25px;
+  opacity: 1;
+  margin-left: 30px;
+  animation: bounce 2s infinite;
 }
 
 .sectionMenu .listaMenu .itemMenu.ativo .botaoMenu {
@@ -145,10 +158,34 @@
   text-shadow: 0 0 6px var(--color-accent-gold-glow-text);
 }
 
-.sectionMenu .listaMenu .itemMenu.ativo .botaoMenu p span {
-  color: var(--color-text-light);
+/* ------------------------- ANIMAÇÕES ------------------------- */
+@keyframes piscarBorda {
+  0%,
+  100% {
+    box-shadow: var(--outline-gold-glow);
+  }
+  50% {
+    box-shadow: none;
+  }
 }
 
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(-10px);
+  }
+  60% {
+    transform: translateX(-5px);
+  }
+}
+
+/* ------------------------- CONTROLES MENU ------------------------- */
 .controlesContainer {
   display: flex;
   justify-content: space-around;

@@ -1,5 +1,6 @@
 import styles from "./MenuPrincipal.module.css";
 import flores from "../../assets/images/flores.webp";
+import React, { useEffect, useRef, useState } from "react";
 
 interface MenuPrincipalProps {
   onAvancarMissoes: () => void;
@@ -16,6 +17,27 @@ export function MenuPrincipal({
   onAvancarPersonagem,
   onAvancarSalvar,
 }: MenuPrincipalProps) {
+  const botoesRef = useRef<(HTMLButtonElement | null)[]>([]);
+  const [indiceAtivo, setIndiceAtivo] = useState(0);
+
+  useEffect(() => {
+    botoesRef.current[0]?.focus();
+  }, []);
+
+  const handleKeyDown = (event: React.KeyboardEvent, index: number) => {
+    const total = botoesRef.current.length;
+
+    if (event.key === "ArrowDown") {
+      event.preventDefault();
+      botoesRef.current[(index + 1) % total]?.focus();
+    }
+
+    if (event.key === "ArrowUp") {
+      event.preventDefault();
+      botoesRef.current[(index - 1 + total) % total]?.focus();
+    }
+  };
+
   return (
     <>
       <img
@@ -68,7 +90,9 @@ export function MenuPrincipal({
         <section className={styles.sectionMenu}>
           <h2 className={styles.tituloMenu}>MENU</h2>
           <ul className={styles.listaMenu}>
-            <li className={`${styles.itemMenu} ${styles.ativo}`}>
+            <li
+              className={`${styles.itemMenu} ${indiceAtivo === 0 ? styles.ativo : ""}`}
+            >
               <svg
                 className={styles.setaAtivo}
                 xmlns="http://www.w3.org/2000/svg"
@@ -82,7 +106,19 @@ export function MenuPrincipal({
                   fill="#FFD66B"
                 />
               </svg>
-              <button className={styles.botaoMenu} onClick={onAvancarMissoes}>
+              <button
+                ref={(el) => {
+                  botoesRef.current[0] = el;
+                }}
+                className={styles.botaoMenu}
+                onClick={onAvancarMissoes}
+                onFocus={() => setIndiceAtivo(0)}
+                onMouseEnter={() => {
+                  setIndiceAtivo(0);
+                  botoesRef.current[0]?.focus();
+                }}
+                onKeyDown={(e) => handleKeyDown(e, 0)}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 16 16"
@@ -96,10 +132,34 @@ export function MenuPrincipal({
                 </p>
               </button>
             </li>
-            <li className={styles.itemMenu}>
+            <li
+              className={`${styles.itemMenu} ${indiceAtivo === 1 ? styles.ativo : ""}`}
+            >
+              <svg
+                className={styles.setaAtivo}
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="24"
+                viewBox="0 0 12 24"
+                fill="none"
+              >
+                <path
+                  d="M0 0H2V2H0V0ZM0 2H4V4H0V2ZM0 4H6V6H0V4ZM0 6H8V8H0V6ZM0 8H10V10H0V8ZM0 10H12V12H0V10ZM0 12H12V14H0V12ZM0 14H10V16H0V14ZM0 16H8V18H0V16ZM0 18H6V20H0V18ZM0 20H4V22H0V20ZM0 22H2V24H0V22Z"
+                  fill="#FFD66B"
+                />
+              </svg>
               <button
+                ref={(el) => {
+                  botoesRef.current[1] = el;
+                }}
                 className={styles.botaoMenu}
                 onClick={onAvancarInventario}
+                onFocus={() => setIndiceAtivo(1)}
+                onMouseEnter={() => {
+                  setIndiceAtivo(1);
+                  botoesRef.current[1]?.focus();
+                }}
+                onKeyDown={(e) => handleKeyDown(e, 1)}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -116,10 +176,34 @@ export function MenuPrincipal({
                 </p>
               </button>
             </li>
-            <li className={styles.itemMenu}>
+            <li
+              className={`${styles.itemMenu} ${indiceAtivo === 2 ? styles.ativo : ""}`}
+            >
+              <svg
+                className={styles.setaAtivo}
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="24"
+                viewBox="0 0 12 24"
+                fill="none"
+              >
+                <path
+                  d="M0 0H2V2H0V0ZM0 2H4V4H0V2ZM0 4H6V6H0V4ZM0 6H8V8H0V6ZM0 8H10V10H0V8ZM0 10H12V12H0V10ZM0 12H12V14H0V12ZM0 14H10V16H0V14ZM0 16H8V18H0V16ZM0 18H6V20H0V18ZM0 20H4V22H0V20ZM0 22H2V24H0V22Z"
+                  fill="#FFD66B"
+                />
+              </svg>
               <button
+                ref={(el) => {
+                  botoesRef.current[2] = el;
+                }}
                 className={styles.botaoMenu}
                 onClick={onAvancarPersonagem}
+                onFocus={() => setIndiceAtivo(2)}
+                onMouseEnter={() => {
+                  setIndiceAtivo(2);
+                  botoesRef.current[2]?.focus();
+                }}
+                onKeyDown={(e) => handleKeyDown(e, 2)}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -134,8 +218,35 @@ export function MenuPrincipal({
                 </p>
               </button>
             </li>
-            <li className={styles.itemMenu}>
-              <button className={styles.botaoMenu} onClick={onAvancarSalvar}>
+            <li
+              className={`${styles.itemMenu} ${indiceAtivo === 3 ? styles.ativo : ""}`}
+            >
+              <svg
+                className={styles.setaAtivo}
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="24"
+                viewBox="0 0 12 24"
+                fill="none"
+              >
+                <path
+                  d="M0 0H2V2H0V0ZM0 2H4V4H0V2ZM0 4H6V6H0V4ZM0 6H8V8H0V6ZM0 8H10V10H0V8ZM0 10H12V12H0V10ZM0 12H12V14H0V12ZM0 14H10V16H0V14ZM0 16H8V18H0V16ZM0 18H6V20H0V18ZM0 20H4V22H0V20ZM0 22H2V24H0V22Z"
+                  fill="#FFD66B"
+                />
+              </svg>
+              <button
+                ref={(el) => {
+                  botoesRef.current[3] = el;
+                }}
+                className={styles.botaoMenu}
+                onClick={onAvancarSalvar}
+                onFocus={() => setIndiceAtivo(3)}
+                onMouseEnter={() => {
+                  setIndiceAtivo(3);
+                  botoesRef.current[3]?.focus();
+                }}
+                onKeyDown={(e) => handleKeyDown(e, 3)}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 16 16"
@@ -149,8 +260,35 @@ export function MenuPrincipal({
                 </p>
               </button>
             </li>
-            <li className={styles.itemMenu}>
-              <button className={styles.botaoMenu} onClick={onAvancarCorreio}>
+            <li
+              className={`${styles.itemMenu} ${indiceAtivo === 4 ? styles.ativo : ""}`}
+            >
+              <svg
+                className={styles.setaAtivo}
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="24"
+                viewBox="0 0 12 24"
+                fill="none"
+              >
+                <path
+                  d="M0 0H2V2H0V0ZM0 2H4V4H0V2ZM0 4H6V6H0V4ZM0 6H8V8H0V6ZM0 8H10V10H0V8ZM0 10H12V12H0V10ZM0 12H12V14H0V12ZM0 14H10V16H0V14ZM0 16H8V18H0V16ZM0 18H6V20H0V18ZM0 20H4V22H0V20ZM0 22H2V24H0V22Z"
+                  fill="#FFD66B"
+                />
+              </svg>
+              <button
+                ref={(el) => {
+                  botoesRef.current[4] = el;
+                }}
+                className={styles.botaoMenu}
+                onClick={onAvancarCorreio}
+                onFocus={() => setIndiceAtivo(4)}
+                onMouseEnter={() => {
+                  setIndiceAtivo(4);
+                  botoesRef.current[4]?.focus();
+                }}
+                onKeyDown={(e) => handleKeyDown(e, 4)}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 16 16"
