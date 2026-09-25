@@ -1,22 +1,66 @@
 :root {
   --color-bg-dark: #24182c;
+  --color-bg-dark-translucent: rgba(36, 24, 44, 0.85);
   --color-shadow-dark: #120a18;
   --color-text-light: #fff1d6;
+  --color-text-light-translucent: rgba(255, 241, 214, 0.1);
+  --color-text-light-border: rgba(255, 241, 214, 0.45);
   --color-accent-gold: #ffd66b;
+  --color-accent-gold-glow-strong: rgba(253, 216, 53, 0.3);
+  --color-accent-gold-glow-soft: rgba(253, 216, 53, 0.15);
+  --color-accent-gold-glow-text: rgba(253, 216, 53, 0.6);
   --color-pure-white: #ffffff;
   --color-shadow-floor: rgba(18, 10, 24, 0.35);
+
+  --color-purple-light: #c4b2f7;
+  --color-purple-medium: #342a4a;
+  --color-purple-border: rgba(196, 178, 247, 0.28);
 
   --font-logo: "Tiny5", monospace;
   --font-pixel: "Silkscreen", monospace;
 
+  --pixel-border-width-inner: 4px;
+  --pixel-border-width-outer: 8px;
+
   --pixel-border-shadow:
-    0 -4px 0 0 var(--color-text-light), 0 4px 0 0 var(--color-text-light),
-    -4px 0 0 0 var(--color-text-light), 4px 0 0 0 var(--color-text-light),
-    0 -8px 0 0 var(--color-shadow-dark), 0 8px 0 0 var(--color-shadow-dark),
-    -8px 0 0 0 var(--color-shadow-dark), 8px 0 0 0 var(--color-shadow-dark),
-    -4px -4px 0 0 var(--color-shadow-dark),
-    4px -4px 0 0 var(--color-shadow-dark),
-    -4px 4px 0 0 var(--color-shadow-dark), 4px 4px 0 0 var(--color-shadow-dark);
+    0 calc(-1 * var(--pixel-border-width-inner)) 0 0 var(--color-text-light),
+    0 var(--pixel-border-width-inner) 0 0 var(--color-text-light),
+    calc(-1 * var(--pixel-border-width-inner)) 0 0 0 var(--color-text-light),
+    var(--pixel-border-width-inner) 0 0 0 var(--color-text-light),
+    0 calc(-1 * var(--pixel-border-width-outer)) 0 0 var(--color-shadow-dark),
+    0 var(--pixel-border-width-outer) 0 0 var(--color-shadow-dark),
+    calc(-1 * var(--pixel-border-width-outer)) 0 0 0 var(--color-shadow-dark),
+    var(--pixel-border-width-outer) 0 0 0 var(--color-shadow-dark),
+    calc(-1 * var(--pixel-border-width-inner))
+      calc(-1 * var(--pixel-border-width-inner)) 0 0 var(--color-shadow-dark),
+    var(--pixel-border-width-inner) calc(-1 * var(--pixel-border-width-inner)) 0
+      0 var(--color-shadow-dark),
+    calc(-1 * var(--pixel-border-width-inner)) var(--pixel-border-width-inner) 0
+      0 var(--color-shadow-dark),
+    var(--pixel-border-width-inner) var(--pixel-border-width-inner) 0 0
+      var(--color-shadow-dark);
+
+  --floating-shadow:
+    var(--pixel-border-shadow), 0 16px 0 0 var(--color-shadow-floor);
+  --floating-shadow-hover:
+    var(--pixel-border-shadow), 0 22px 0 0 var(--color-shadow-floor);
+
+  --outline-gold:
+    0 -3px 0 0 var(--color-accent-gold), 0 3px 0 0 var(--color-accent-gold),
+    -3px 0 0 0 var(--color-accent-gold), 3px 0 0 0 var(--color-accent-gold);
+  --outline-gold-glow:
+    var(--outline-gold), 0 6px 6px var(--color-accent-gold-glow-strong),
+    0 0 20px 6px var(--color-accent-gold-glow-soft);
+
+  --outline-dark:
+    0 -3px 0 0 var(--color-shadow-dark), 0 3px 0 0 var(--color-shadow-dark),
+    -3px 0 0 0 var(--color-shadow-dark), 3px 0 0 0 var(--color-shadow-dark);
+
+  --outline-light-translucent:
+    0 -3px 0 0 var(--color-text-light-border),
+    0 3px 0 0 var(--color-text-light-border),
+    -3px 0 0 0 var(--color-text-light-border),
+    3px 0 0 0 var(--color-text-light-border);
 }
 
 * {

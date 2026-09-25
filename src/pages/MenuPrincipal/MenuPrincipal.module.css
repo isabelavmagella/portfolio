@@ -14,24 +14,21 @@
 .header .tituloHeader {
   padding: 10px 15px;
   font-family: var(--font-logo);
-  background-color: rgba(36, 24, 44, 0.85);
+  background-color: var(--color-bg-dark-translucent);
   color: var(--color-text-light);
   font-size: 20px;
   display: flex;
   align-items: center;
   gap: 10px;
   cursor: default;
-
-  box-shadow:
-    var(--pixel-border-shadow),
-    0 16px 0 0 var(--color-shadow-floor);
+  box-shadow: var(--floating-shadow);
 }
 
 .header .tituloHeader span {
   font-family: var(--font-pixel);
-  background-color: #342a4a;
+  background-color: var(--color-purple-medium);
   padding: 5px 10px;
-  color: #c4b2f7;
+  color: var(--color-purple-light);
   font-size: 11px;
 }
 
@@ -42,7 +39,7 @@
 
 .header .linksContainer .linkSocial {
   padding: 10px 20px;
-  background-color: rgba(36, 24, 44, 0.85);
+  background-color: var(--color-bg-dark-translucent);
   text-decoration: none;
   color: var(--color-text-light);
   font-family: var(--font-pixel);
@@ -51,35 +48,27 @@
   align-items: center;
   gap: 10px;
   transition: ease-in-out 0.2s;
-
-  box-shadow:
-    var(--pixel-border-shadow),
-    0 16px 0 0 var(--color-shadow-floor);
+  box-shadow: var(--floating-shadow);
 }
 
 .header .linksContainer .linkSocial:hover {
   transform: translateY(-6px);
-  box-shadow:
-    var(--pixel-border-shadow),
-    0 22px 0 0 var(--color-shadow-floor);
+  box-shadow: var(--floating-shadow-hover);
 }
 
 .header .linksContainer .linkSocial svg {
   height: 30px;
-  fill: #c4b2f7;
+  fill: var(--color-purple-light);
 }
 
 /* ------------------------- MENU SECTION ------------------------- */
 .sectionMenu {
-  background-color: rgba(36, 24, 44, 0.85);
+  background-color: var(--color-bg-dark-translucent);
   max-width: 600px;
   margin: 30px auto 0;
   position: relative;
   padding: 30px 25px;
-
-  box-shadow:
-    var(--pixel-border-shadow),
-    0 16px 0 0 var(--color-shadow-floor);
+  box-shadow: var(--floating-shadow);
 }
 
 .sectionMenu .tituloMenu {
@@ -92,12 +81,7 @@
   padding: 6px 15px;
   font-family: var(--font-logo);
   letter-spacing: 3px;
-
-  box-shadow:
-    0 -3px 0 0 var(--color-shadow-dark),
-    0 3px 0 0 var(--color-shadow-dark),
-    -3px 0 0 0 var(--color-shadow-dark),
-    3px 0 0 0 var(--color-shadow-dark);
+  box-shadow: var(--outline-dark);
 }
 
 .sectionMenu .listaMenu {
@@ -123,7 +107,7 @@
 
 .sectionMenu .listaMenu .itemMenu .botaoMenu svg {
   height: 28px;
-  fill: #c4b2f7;
+  fill: var(--color-purple-light);
 }
 
 .sectionMenu .listaMenu .itemMenu .botaoMenu p {
@@ -136,18 +120,12 @@
 .sectionMenu .listaMenu .itemMenu .botaoMenu p span {
   display: block;
   font-family: var(--font-logo);
-  color: #c4b2f7;
+  color: var(--color-purple-light);
   font-size: 16px;
 }
 
 .sectionMenu .listaMenu .itemMenu.ativo {
-  box-shadow:
-    0 -3px 0 0 var(--color-accent-gold),
-    0 3px 0 0 var(--color-accent-gold),
-    -3px 0 0 0 var(--color-accent-gold),
-    3px 0 0 0 var(--color-accent-gold),
-    0 6px 6px rgba(253, 216, 53, 0.3),
-    0 0 20px 6px rgba(253, 216, 53, 0.15);
+  box-shadow: var(--outline-gold-glow);
 }
 
 .sectionMenu .listaMenu .itemMenu.ativo .setaAtivo {
@@ -164,7 +142,7 @@
 
 .sectionMenu .listaMenu .itemMenu.ativo .botaoMenu p {
   color: var(--color-accent-gold);
-  text-shadow: 0 0 6px rgba(253, 216, 53, 0.6);
+  text-shadow: 0 0 6px var(--color-accent-gold-glow-text);
 }
 
 .sectionMenu .listaMenu .itemMenu.ativo .botaoMenu p span {
@@ -175,9 +153,9 @@
   display: flex;
   justify-content: space-around;
   font-family: var(--font-logo);
-  color: #c4b2f7;
+  color: var(--color-purple-light);
   padding-top: 25px;
-  border-top: 4px solid rgba(196, 178, 247, 0.28);
+  border-top: 4px solid var(--color-purple-border);
   margin-top: 15px;
 }
 
@@ -188,12 +166,8 @@
 }
 
 .controlesContainer .grupoSetas .setaWrapper {
-  background-color: rgba(255, 241, 214, 0.1);
-  box-shadow:
-    0 -3px 0 0 rgba(255, 241, 214, 0.45),
-    0 3px 0 0 rgba(255, 241, 214, 0.45),
-    -3px 0 0 0 rgba(255, 241, 214, 0.45),
-    3px 0 0 0 rgba(255, 241, 214, 0.45);
+  background-color: var(--color-text-light-translucent);
+  box-shadow: var(--outline-light-translucent);
   padding: 0 10px;
 }
 
@@ -209,12 +183,8 @@
 }
 
 .controlesContainer .grupoEnter .teclaEnter {
-  background-color: rgba(255, 241, 214, 0.1);
-  box-shadow:
-    0 -3px 0 0 rgba(255, 241, 214, 0.45),
-    0 3px 0 0 rgba(255, 241, 214, 0.45),
-    -3px 0 0 0 rgba(255, 241, 214, 0.45),
-    3px 0 0 0 rgba(255, 241, 214, 0.45);
+  background-color: var(--color-text-light-translucent);
+  box-shadow: var(--outline-light-translucent);
   padding: 5px 10px;
   color: var(--color-text-light);
 }
