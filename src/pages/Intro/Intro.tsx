@@ -1,4 +1,5 @@
 import styles from "./Intro.module.css";
+import { motion } from "framer-motion";
 import flores from "../../assets/images/flores.webp";
 
 interface IntroProps {
@@ -7,7 +8,13 @@ interface IntroProps {
 
 export function Intro({ onAvancar }: IntroProps) {
   return (
-    <>
+    <motion.main
+      className="container"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.7 }}
+    >
       <img
         src={flores}
         id="portfolio-background"
@@ -15,7 +22,10 @@ export function Intro({ onAvancar }: IntroProps) {
         alt="Imagem de fundo"
       />
 
-      <section id="intro-section" className={styles.introSection}>
+      <section
+        id="intro-section"
+        className={`${styles.introSection} container`}
+      >
         <h1>ISABELA MAGELLA</h1>
 
         <p className={styles.tagPixel}>PORTFÓLIO • DEV</p>
@@ -36,6 +46,6 @@ export function Intro({ onAvancar }: IntroProps) {
           CLIQUE PARA COMEÇAR
         </button>
       </section>
-    </>
+    </motion.main>
   );
 }

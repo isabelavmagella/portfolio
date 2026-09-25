@@ -1,4 +1,5 @@
 import styles from "./MenuPrincipal.module.css";
+import { motion } from "framer-motion";
 import flores from "../../assets/images/flores.webp";
 import React, { useEffect, useRef, useState } from "react";
 import { Header } from "../../components/Header/Header";
@@ -40,7 +41,13 @@ export function MenuPrincipal({
   };
 
   return (
-    <>
+    <motion.main
+      className="container"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.7 }}
+    >
       <img
         src={flores}
         id="portfolio-background"
@@ -48,7 +55,7 @@ export function MenuPrincipal({
         alt="Imagem de fundo"
       />
 
-      <div className={styles.menuPrincipal}>
+      <div className={`${styles.menuPrincipal} + container`}>
         <Header />
 
         <section className={styles.sectionMenu}>
@@ -298,6 +305,6 @@ export function MenuPrincipal({
           </div>
         </section>
       </div>
-    </>
+    </motion.main>
   );
 }
