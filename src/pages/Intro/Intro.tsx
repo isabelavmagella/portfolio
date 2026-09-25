@@ -1,5 +1,5 @@
 import styles from "./Intro.module.css";
-import videoBg from "../../assets/video/flo.mp4";
+import flores from "../../assets/images/flores.webp";
 
 interface IntroProps {
   onAvancar: () => void;
@@ -8,17 +8,12 @@ interface IntroProps {
 export function Intro({onAvancar}: IntroProps) {
   return (
     <>
-      <video
+      <img
+        src={flores}
         id="portfolio-background"
         className="portfolio-background"
-        autoPlay
-        muted
-        loop
-        playsInline
-      >
-        <source src={videoBg} type="video/mp4" />
-        Seu navegador não suporta vídeo
-      </video>
+        alt="Imagem de fundo"
+      />
 
       <section id="intro-section" className={styles.introSection}>
         <h1>ISABELA MAGELLA</h1>

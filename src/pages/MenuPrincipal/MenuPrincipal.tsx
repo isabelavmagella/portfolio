@@ -1,6 +1,5 @@
 import styles from "./MenuPrincipal.module.css";
-import videoBg from "../../assets/video/flo.mp4";
-import { useEffect, useRef } from "react";
+import flores from "../../assets/images/flores.webp";
 
 interface MenuPrincipalProps {
   onAvancarMissoes: () => void;
@@ -17,28 +16,14 @@ export function MenuPrincipal({
   onAvancarPersonagem,
   onAvancarSalvar,
 }: MenuPrincipalProps) {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.playbackRate = 0.75;
-    }
-  }, []);
-
   return (
     <>
-      <video
-        ref={videoRef}
+      <img
+        src={flores}
         id="portfolio-background"
         className="portfolio-background"
-        autoPlay
-        muted
-        loop
-        playsInline
-      >
-        <source src={videoBg} type="video/mp4" />
-        Seu navegador não suporta vídeo
-      </video>
+        alt="Imagem de fundo"
+      />
 
       <div className={styles.menuPrincipal}>
         <header className={styles.header}>
