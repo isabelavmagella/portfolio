@@ -157,3 +157,10 @@
   padding: 5px 10px;
   color: var(--color-text-light);
 }
+
+/* ------------------------- RESPONSIVO ------------------------- */
+@media (max-width: 768px) {
+  .menuPrincipal {
+    padding: 20px;
+  }
+}

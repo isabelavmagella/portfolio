@@ -55,3 +55,14 @@
   height: 30px;
   fill: var(--color-purple-light);
 }
+
+/* ------------------------- RESPONSIVO ------------------------- */
+@media (max-width: 768px) {
+  .header {
+    justify-content: center;
+  }
+
+  .header .linksContainer {
+    display: none;
+  }
+}

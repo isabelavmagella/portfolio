@@ -80,12 +80,16 @@
   }
 }
 
-@media (max-width: 475px) {
+@media (max-width: 768px) {
   .introSection {
     padding: 25px;
   }
 
   .introSection h1 {
     font-size: 80px;
+  }
+
+  .introSection .btnPixel {
+    font-size: 18px;
   }
 }
