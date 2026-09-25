@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Intro } from "./pages/Intro/Intro";
 import { MenuPrincipal } from "./pages/MenuPrincipal/MenuPrincipal";
+import { Missoes } from "./pages/Missoes/Missoes";
 
 function App() {
   const [telaAtiva, setTelaAtiva] = useState<
@@ -27,6 +28,10 @@ function App() {
           onAvancarPersonagem={() => setTelaAtiva("personagem")}
           onAvancarSalvar={() => setTelaAtiva("salvar")}
         />
+      )}
+
+      {telaAtiva === "missoes" && (
+        <Missoes onVoltar={() => setTelaAtiva("menu")} />
       )}
     </>
   );
