@@ -52,7 +52,7 @@ export function MenuPrincipal({
         src={flores}
         id="portfolio-background"
         className="portfolio-background"
-        alt="Imagem de fundo"
+        alt="Plano de fundo decorativo com flores"
       />
 
       <div className={`${styles.menuPrincipal} + container`}>
