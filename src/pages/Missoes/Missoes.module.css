@@ -332,3 +332,55 @@
 .hidden {
   display: none !important;
 }
+
+/* ------------------------- RESPONSIVO ------------------------- */
+@media (max-width: 900px) {
+  .missoesSection {
+    margin: 0 20px;
+    padding: 25px 20px;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+  }
+
+  .missoesHeader {
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .conteudoPainel {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .conteudoPainel .projetosNav .projetosLista {
+    width: 100%;
+  }
+
+  .projetoDetalhes .projetoPreview {
+    display: none;
+  }
+
+  .projetoDetalhes .detalhesHeader {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .projetoDetalhes .detalhesHeader h2 {
+    font-size: 24px;
+  }
+
+  .projetoDetalhes .detalhesSecao .tagsTecnologias {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .projetoDetalhes .detalhesAcoes {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .projetoDetalhes .detalhesAcoes a {
+    padding: 8px 20px;
+  }
+}
