@@ -158,6 +158,7 @@
 @media (max-width: 768px) {
   .menuPrincipal {
     padding: 20px;
+    overflow-y: auto;
   }
 }
 
