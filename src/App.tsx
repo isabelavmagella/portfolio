@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Intro } from "./pages/Intro/Intro";
 import { MenuPrincipal } from "./pages/MenuPrincipal/MenuPrincipal";
 import { Missoes } from "./pages/Missoes/Missoes";
+import { Inventario } from "./pages/Inventario/Inventario";
 
 function App() {
   const [telaAtiva, setTelaAtiva] = useState<
@@ -32,6 +33,10 @@ function App() {
 
       {telaAtiva === "missoes" && (
         <Missoes onVoltar={() => setTelaAtiva("menu")} />
+      )}
+
+      {telaAtiva === "inventario" && (
+        <Inventario onVoltar={() => setTelaAtiva("menu")}/>
       )}
     </>
   );

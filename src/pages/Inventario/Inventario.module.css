@@ -1,0 +1,360 @@
+/* ------------------------- CARD HEADER ------------------------- */
+.inventarioSection {
+  max-width: 1000px;
+}
+
+.inventarioHeader {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 4px solid var(--color-purple-border);
+  padding-bottom: 25px;
+}
+
+.inventarioHeader .tituloContainer {
+  display: flex;
+  align-items: end;
+  gap: 10px;
+  font-family: var(--font-logo);
+}
+
+.inventarioHeader .tituloContainer svg {
+  fill: var(--color-accent-gold);
+  height: 35px;
+}
+
+.inventarioHeader .tituloContainer h1 {
+  color: var(--color-text-light);
+}
+
+.inventarioHeader .tituloContainer p {
+  color: var(--color-purple-light);
+}
+
+.inventarioHeader .botaoVoltar {
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: var(--color-text-light-translucent);
+  box-shadow: var(--outline-light-translucent);
+  padding: 5px 20px;
+  color: var(--color-text-light);
+  font-family: var(--font-logo);
+  gap: 5px;
+  cursor: pointer;
+}
+
+.inventarioHeader .botaoVoltar p {
+  font-size: 18px;
+}
+
+.inventarioHeader .botaoVoltar .teclaEsc {
+  box-shadow: var(--outline-light-translucent);
+  font-size: 12px;
+  padding: 5px 10px;
+  margin-left: 5px;
+}
+
+.inventarioHeader .botaoVoltar svg {
+  height: 30px;
+  fill: var(--color-accent-gold);
+}
+
+.inventarioHeader .botaoVoltar:hover,
+.inventarioHeader .botaoVoltar:focus {
+  animation: piscarBorda 1.5s ease-in-out infinite;
+}
+
+.inventarioHeader .botaoVoltar:hover svg,
+.inventarioHeader .botaoVoltar:focus svg {
+  animation: bounce 1.25s infinite;
+}
+
+/* ------------------------- CARD MENU ------------------------- */
+.conteudoPainel {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  font-family: var(--font-logo);
+}
+
+.conteudoPainel .gridFerramentas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 100px;
+  gap: 10px;
+  align-content: start;
+  max-height: 320px;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  scroll-behavior: smooth;
+  padding: 4px 10px 4px 4px;
+  margin: -4px 0 -4px -4px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-purple-scrollbar) transparent;
+}
+
+/* ------------------------- MENU ESTADO BASE ------------------------- */
+.conteudoPainel .gridFerramentas .ferramenta button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  gap: 5px;
+  background-color: transparent;
+  border: none;
+  box-shadow: var(--outline-purple);
+  font-family: var(--font-logo);
+  cursor: pointer;
+}
+
+.conteudoPainel .gridFerramentas .ferramenta button svg {
+  height: 35px;
+  fill: var(--color-purple-light);
+}
+
+.conteudoPainel .gridFerramentas .ferramenta button .nomeFerramenta {
+  font-size: 11px;
+  color: var(--color-text-light);
+}
+
+.conteudoPainel .gridFerramentas .ferramenta.ferramentaVazia {
+  height: 100px;
+  box-shadow: var(--outline-purple-faint);
+  cursor: default;
+}
+
+/* ------------------------- MENU ESTADO ATIVO ------------------------- */
+.conteudoPainel .gridFerramentas .ferramenta.ativo button {
+  animation: piscarBordaFerramenta 1.5s ease-in-out infinite;
+}
+
+.conteudoPainel .gridFerramentas .ferramenta.ativo button svg {
+  fill: var(--color-accent-gold);
+}
+
+.conteudoPainel .gridFerramentas .ferramenta.ativo button .nomeFerramenta {
+  color: var(--color-accent-gold);
+}
+
+/* ------------------------- CARD DETALHES ------------------------- */
+.detalhesFerramenta {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 500px;
+  padding: 20px;
+  font-family: var(--font-logo);
+  background-color: var(--color-bg-dark-translucent);
+  box-shadow: var(--outline-purple);
+}
+
+.detalhesFerramenta .detalhesCabecalho {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.detalhesFerramenta .detalhesCabecalho .detalhesIconeContainer {
+  padding: 10px;
+  box-shadow: var(--outline-gold);
+  background-color: var(--color-accent-gold-highlight);
+}
+
+.detalhesFerramenta .detalhesCabecalho svg {
+  height: 35px;
+  fill: var(--color-accent-gold);
+}
+
+.detalhesFerramenta .detalhesCabecalho .detalhesNome {
+  font-size: 35px;
+  color: var(--color-text-light);
+}
+
+.detalhesFerramenta .secaoNivel .rotulo,
+.detalhesFerramenta .secaoUso .rotulo,
+.detalhesFerramenta .secaoProjetos .rotulo {
+  margin-bottom: 10px;
+  color: var(--color-text-light);
+}
+
+.detalhesFerramenta .secaoNivel .rotulo .marcador,
+.detalhesFerramenta .secaoUso .rotulo .marcador,
+.detalhesFerramenta .secaoProjetos .rotulo .marcador {
+  color: var(--color-accent-gold);
+}
+
+/* ------------------------- DETALHES NÍVEL ------------------------- */
+.detalhesFerramenta .secaoNivel .barraNivel {
+  display: flex;
+  gap: 10px;
+}
+
+.detalhesFerramenta .secaoNivel .barraNivel .blocoNivel {
+  height: 20px;
+  width: 20px;
+}
+
+.detalhesFerramenta .secaoNivel .barraNivel .blocoNivel.blocoPreenchido {
+  background-color: var(--color-accent-gold);
+  box-shadow: var(--outline-dark);
+}
+
+.detalhesFerramenta .secaoNivel .barraNivel .blocoNivel.blocoVazio {
+  background-color: transparent;
+  box-shadow: var(--outline-purple);
+}
+
+/* ------------------------- DETALHES USO E PROJETOS ------------------------- */
+.detalhesFerramenta .secaoUso .textoUso {
+  font-size: 20px;
+  color: var(--color-text-light);
+}
+
+.detalhesFerramenta .secaoProjetos .listaProjetos {
+  display: flex;
+  gap: 15px;
+}
+
+.detalhesFerramenta .secaoProjetos .projeto {
+  padding: 5px 20px;
+  color: var(--color-text-light);
+  background-color: var(--color-text-light-translucent);
+  box-shadow: var(--outline-light-translucent);
+}
+
+/* ------------------------- CONTROLES MENU ------------------------- */
+.grupoSetas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+  padding-top: 25px;
+  border-top: 4px solid var(--color-purple-border);
+  font-family: var(--font-logo);
+  color: var(--color-purple-light);
+}
+
+.grupoSetas .setaWrapper {
+  padding: 0 10px;
+  background-color: var(--color-text-light-translucent);
+  box-shadow: var(--outline-light-translucent);
+}
+
+.grupoSetas .setaWrapper svg {
+  height: 25px;
+  fill: var(--color-text-light);
+}
+
+/* ------------------------- ANIMAÇÕES ------------------------- */
+@keyframes piscarBorda {
+  0%,
+  100% {
+    box-shadow: var(--outline-gold-glow);
+  }
+  50% {
+    box-shadow: var(--outline-light-translucent);
+  }
+}
+
+@keyframes piscarBordaFerramenta {
+  0%,
+  100% {
+    box-shadow: var(--outline-gold-glow);
+    background-color: var(--color-accent-gold-highlight);
+  }
+  50% {
+    box-shadow: var(--outline-purple);
+    background-color: inherit;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(-10px);
+  }
+  60% {
+    transform: translateX(-5px);
+  }
+}
+
+/* ------------------------- UTILITÁRIOS ------------------------- */
+.hidden {
+  display: none !important;
+}
+
+/* ------------------------- RESPONSIVO ------------------------- */
+@media (max-width: 900px) {
+  .inventarioSection {
+    margin: 0 20px;
+    padding: 25px 20px;
+    max-height: calc(100vh - 130px);
+    overflow-y: auto;
+  }
+
+  .inventarioHeader {
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .conteudoPainel {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .conteudoPainel .gridFerramentas {
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    max-height: none;
+    overflow: visible;
+    padding: 0;
+    margin: 0;
+  }
+
+  .conteudoPainel .gridFerramentas .ferramenta button {
+    width: 100%;
+    height: 90px;
+  }
+
+  .conteudoPainel .gridFerramentas .ferramenta.ferramentaVazia {
+    display: none;
+  }
+
+  .detalhesFerramenta {
+    max-width: 100%;
+    gap: 20px;
+  }
+
+  .detalhesFerramenta .detalhesCabecalho .detalhesNome {
+    font-size: 26px;
+  }
+
+  .detalhesFerramenta .secaoNivel .rotulo,
+  .detalhesFerramenta .secaoUso .rotulo,
+  .detalhesFerramenta .secaoProjetos .rotulo {
+    margin-bottom: 5px;
+  }
+
+  .detalhesFerramenta .secaoProjetos .listaProjetos {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .grupoSetas {
+    display: none;
+  }
+}

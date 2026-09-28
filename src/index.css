@@ -12,10 +12,11 @@
   --color-accent-gold-highlight: rgba(255, 214, 107, 0.12);
   --color-pure-white: #ffffff;
   --color-shadow-floor: rgba(18, 10, 24, 0.35);
-
   --color-purple-light: #c4b2f7;
   --color-purple-medium: #342a4a;
   --color-purple-border: rgba(196, 178, 247, 0.28);
+  --color-purple-border-faint: rgba(196, 178, 247, 0.18);
+  --color-purple-scrollbar: rgba(196, 178, 247, 0.45);
 
   --font-logo: "Tiny5", monospace;
   --font-pixel: "Silkscreen", monospace;
@@ -62,6 +63,16 @@
     0 3px 0 0 var(--color-text-light-border),
     -3px 0 0 0 var(--color-text-light-border),
     3px 0 0 0 var(--color-text-light-border);
+
+  --outline-purple:
+    0 -3px 0 0 var(--color-purple-border), 0 3px 0 0 var(--color-purple-border),
+    -3px 0 0 0 var(--color-purple-border), 3px 0 0 0 var(--color-purple-border);
+
+  --outline-purple-faint:
+    0 -3px 0 0 var(--color-purple-border-faint),
+    0 3px 0 0 var(--color-purple-border-faint),
+    -3px 0 0 0 var(--color-purple-border-faint),
+    3px 0 0 0 var(--color-purple-border-faint);
 }
 
 * {
