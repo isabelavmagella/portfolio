@@ -92,3 +92,11 @@ body {
   position: absolute;
   inset: 0;
 }
+
+.sessao {
+  background-color: var(--color-bg-dark-translucent);
+  margin: 0 auto;
+  position: relative;
+  padding: 30px 25px;
+  box-shadow: var(--floating-shadow);
+}

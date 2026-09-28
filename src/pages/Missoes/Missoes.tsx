@@ -193,7 +193,7 @@ export function Missoes({ onVoltar }: MissoesProps) {
         transition={{ duration: 0.7 }}
       >
         <Header />
-        <section className={styles.missoesSection}>
+        <section className={`${styles.missoesSection} sessao`}>
           <header className={styles.missoesHeader}>
             <div className={styles.tituloContainer}>
               <svg

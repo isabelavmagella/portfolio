@@ -1,11 +1,6 @@
 /* ------------------------- CARD HEADER ------------------------- */
 .missoesSection {
-  background-color: var(--color-bg-dark-translucent);
   max-width: 1000px;
-  margin: 0 auto;
-  position: relative;
-  padding: 30px 35px;
-  box-shadow: var(--floating-shadow);
 }
 
 .missoesHeader {

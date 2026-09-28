@@ -58,7 +58,7 @@ export function MenuPrincipal({
       <div className={`${styles.menuPrincipal} container`}>
         <Header />
 
-        <section className={styles.sectionMenu}>
+        <section className={`${styles.sectionMenu} sessao`}>
           <h2 className={styles.tituloMenu}>MENU</h2>
           <ul className={styles.listaMenu}>
             <li
