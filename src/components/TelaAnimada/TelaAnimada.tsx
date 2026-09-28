@@ -2,13 +2,14 @@ import { motion } from "framer-motion";
 import type { ReactNode } from "react";
 
 interface TelaAnimadaProps {
+  className?: string;
   children: ReactNode;
 }
 
-export function TelaAnimada({ children }: TelaAnimadaProps) {
+export function TelaAnimada({ className, children }: TelaAnimadaProps) {
   return (
     <motion.main
-      className="container"
+      className={className ? `container ${className}` : "container"}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}

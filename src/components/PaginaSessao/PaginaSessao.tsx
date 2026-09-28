@@ -31,7 +31,7 @@ export function PaginaSessao({
     <>
       <ImagemFundo src={ceu} />
 
-      <TelaAnimada>
+      <TelaAnimada className="layoutCentralizado">
         <Header />
 
         <section className={`${className} sessao`}>

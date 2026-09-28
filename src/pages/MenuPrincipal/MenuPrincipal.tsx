@@ -71,7 +71,7 @@ export function MenuPrincipal({
     <TelaAnimada>
       <ImagemFundo src={flores} />
 
-      <div className={`${styles.menuPrincipal} container`}>
+      <div className={`${styles.menuPrincipal} container layoutCentralizado`}>
         <Header />
 
         <section className={`${styles.sectionMenu} sessao`}>
