@@ -1,0 +1,183 @@
+/* ------------------------- CARD HEADER ------------------------- */
+.correioSection {
+  max-width: 600px;
+  height: 500px;
+}
+
+.correioHeader {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 4px solid var(--color-purple-border);
+  padding-bottom: 25px;
+}
+
+.correioHeader .tituloContainer {
+  display: flex;
+  align-items: end;
+  gap: 10px;
+  font-family: var(--font-logo);
+}
+
+.correioHeader .tituloContainer svg {
+  fill: var(--color-accent-gold);
+  height: 35px;
+}
+
+.correioHeader .tituloContainer h1 {
+  color: var(--color-text-light);
+}
+
+.correioHeader .tituloContainer p {
+  color: var(--color-purple-light);
+}
+
+.correioHeader .botaoVoltar {
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: var(--color-text-light-translucent);
+  box-shadow: var(--outline-light-translucent);
+  padding: 5px 20px;
+  color: var(--color-text-light);
+  font-family: var(--font-logo);
+  gap: 5px;
+  cursor: pointer;
+}
+
+.correioHeader .botaoVoltar p {
+  font-size: 18px;
+}
+
+.correioHeader .botaoVoltar .teclaEsc {
+  box-shadow: var(--outline-light-translucent);
+  font-size: 12px;
+  padding: 5px 10px;
+  margin-left: 5px;
+}
+
+.correioHeader .botaoVoltar svg {
+  height: 30px;
+  fill: var(--color-accent-gold);
+}
+
+.correioHeader .botaoVoltar:hover,
+.correioHeader .botaoVoltar:focus {
+  animation: piscarBorda 1.5s ease-in-out infinite;
+}
+
+.correioHeader .botaoVoltar:hover svg,
+.correioHeader .botaoVoltar:focus svg {
+  animation: bounce 1.25s infinite;
+}
+
+/* ------------------------- PAINEL CONTEUDO ------------------------- */
+.conteudoPainel {
+  font-family: var(--font-logo);
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.conteudoPainel .rotulo {
+  color: var(--color-text-light);
+  font-size: 12px;
+}
+
+.conteudoPainel .rotulo span {
+  color: var(--color-accent-gold);
+}
+
+.conteudoPainel .contato {
+  display: flex;
+  gap: 15px;
+  background-color: var(--color-text-light-translucent);
+  box-shadow:
+    0 -3px 0 0 var(--color-purple-light),
+    0 3px 0 0 var(--color-purple-light),
+    -3px 0 0 0 var(--color-purple-light),
+    3px 0 0 0 var(--color-purple-light);
+  padding: 15px 20px;
+}
+
+.conteudoPainel .contato svg {
+  height: 35px;
+  fill: var(--color-purple-light);
+}
+
+.conteudoPainel .contato .contatoTipo {
+  color: var(--color-purple-light);
+  font-size: 12px;
+}
+
+.conteudoPainel .contato .contatoValor {
+  color: var(--color-text-light);
+}
+
+/* ------------------------- ANIMAÇÕES ------------------------- */
+@keyframes piscarBorda {
+  0%,
+  100% {
+    box-shadow: var(--outline-gold-glow);
+  }
+  50% {
+    box-shadow: var(--outline-light-translucent);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(-10px);
+  }
+  60% {
+    transform: translateX(-5px);
+  }
+}
+
+/* ------------------------- RESPONSIVO ------------------------- */
+@media (max-width: 900px) {
+  .correioSection {
+    margin: 0 20px;
+    padding: 25px 20px;
+    height: auto;
+  }
+
+  .correioHeader {
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .correioHeader .botaoVoltar .teclaEsc {
+    display: none;
+  }
+
+  .conteudoPainel {
+    gap: 20px;
+  }
+
+  .conteudoPainel .contato {
+    align-items: center;
+    padding: 12px 15px;
+  }
+
+  .conteudoPainel .contato svg {
+    height: 30px;
+    flex-shrink: 0;
+  }
+
+  .conteudoPainel .contato .infoContato {
+    min-width: 0;
+  }
+
+  .conteudoPainel .contato .contatoValor {
+    font-size: 14px;
+  }
+}
