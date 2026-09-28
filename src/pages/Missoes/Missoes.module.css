@@ -243,7 +243,8 @@
   transition: ease-in-out 0.1s;
 }
 
-.projetoDetalhes .detalhesAcoes a:hover, .projetoDetalhes .detalhesAcoes a:focus {
+.projetoDetalhes .detalhesAcoes a:hover,
+.projetoDetalhes .detalhesAcoes a:focus {
   transform: translateY(-4px);
 }
 
@@ -260,7 +261,8 @@
   fill: var(--color-text-light);
 }
 
-.projetoDetalhes .detalhesAcoes .verCodigo:hover, .projetoDetalhes .detalhesAcoes .verCodigo:focus {
+.projetoDetalhes .detalhesAcoes .verCodigo:hover,
+.projetoDetalhes .detalhesAcoes .verCodigo:focus {
   box-shadow:
     0 -3px 0 0 var(--color-text-light-border),
     -3px 0 0 0 var(--color-text-light-border),
@@ -278,7 +280,8 @@
   fill: var(--color-shadow-dark);
 }
 
-.projetoDetalhes .detalhesAcoes .linkProjeto:hover, .projetoDetalhes .detalhesAcoes .linkProjeto:focus {
+.projetoDetalhes .detalhesAcoes .linkProjeto:hover,
+.projetoDetalhes .detalhesAcoes .linkProjeto:focus {
   box-shadow:
     var(--outline-dark),
     0 6px 0 0 var(--color-shadow-dark);
