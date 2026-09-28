@@ -3,6 +3,7 @@ import { Intro } from "./pages/Intro/Intro";
 import { MenuPrincipal } from "./pages/MenuPrincipal/MenuPrincipal";
 import { Missoes } from "./pages/Missoes/Missoes";
 import { Inventario } from "./pages/Inventario/Inventario";
+import { Personagem } from "./pages/Personagem/Personagem";
 
 function App() {
   const [telaAtiva, setTelaAtiva] = useState<
@@ -37,6 +38,10 @@ function App() {
 
       {telaAtiva === "inventario" && (
         <Inventario onVoltar={() => setTelaAtiva("menu")}/>
+      )}
+
+      {telaAtiva === "personagem" && (
+        <Personagem onVoltar={() => setTelaAtiva("menu")}/>
       )}
     </>
   );
