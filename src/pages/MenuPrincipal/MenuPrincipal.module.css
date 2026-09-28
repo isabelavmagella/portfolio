@@ -162,6 +162,10 @@
 }
 
 @media (max-width: 500px) {
+  .sectionMenu .listaMenu .itemMenu {
+    margin-bottom: 10px;
+  }
+  
   .sectionMenu .listaMenu .itemMenu .botaoMenu p {
     font-size: 20px;
   }
