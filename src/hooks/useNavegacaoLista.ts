@@ -16,13 +16,6 @@ export const TECLAS_HORIZONTAIS: TeclasNavegacao = {
   anterior: "ArrowLeft",
 };
 
-/**
- * Navegação entre os botões de uma lista pelo teclado (com volta ao início)
- * e pelo mouse. Foca o primeiro botão ao montar e mantém o índice ativo
- * sincronizado com o foco.
- *
- * Retorna uma função que gera as props de cada botão da lista.
- */
 export function useNavegacaoLista(
   total: number,
   setIndiceAtivo: (index: number) => void,
