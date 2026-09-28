@@ -112,10 +112,12 @@
     padding: 25px 20px;
     max-height: calc(100vh - 130px);
     max-height: calc(100dvh - 130px);
+    overflow-y: auto;
   }
 
   .conteudoPainel {
     justify-content: start;
     margin-top: 25px;
+    height: auto;
   }
 }
