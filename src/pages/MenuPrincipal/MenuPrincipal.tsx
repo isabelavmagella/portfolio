@@ -55,7 +55,7 @@ export function MenuPrincipal({
         alt="Plano de fundo decorativo com flores"
       />
 
-      <div className={`${styles.menuPrincipal} + container`}>
+      <div className={`${styles.menuPrincipal} container`}>
         <Header />
 
         <section className={styles.sectionMenu}>
