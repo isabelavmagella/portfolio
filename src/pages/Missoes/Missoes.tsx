@@ -124,7 +124,7 @@ function DetalhesProjeto({ indiceAtivo }: DetalhesProjetoProps) {
 
       <div className={styles.detalhesAcoes}>
         <a
-          href="#codigo"
+          href={projeto.linkGit}
           className={styles.verCodigo}
           rel="noopener noreferrer"
         >
@@ -140,7 +140,7 @@ function DetalhesProjeto({ indiceAtivo }: DetalhesProjetoProps) {
         </a>
 
         <a
-          href="#online"
+          href={projeto.linkProjeto}
           className={styles.linkProjeto}
           rel="noopener noreferrer"
         >

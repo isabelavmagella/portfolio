@@ -5,6 +5,8 @@ export interface Projeto {
   objetivo: string;
   equipamento: string[];
   previw: string;
+  linkGit: string;
+  linkProjeto: string;
 }
 
 export const MOCK_PROJETOS: Projeto[] = [
@@ -16,6 +18,8 @@ export const MOCK_PROJETOS: Projeto[] = [
       "[Qual problema o projeto resolve e o que você construiu, em uma ou duas frases.]",
     equipamento: ["[TECNOLOGIA]", "[TECNOLOGIA]", "[TECNOLOGIA]"],
     previw: "https://placehold.co/600x100",
+    linkGit: "",
+    linkProjeto: "",
   },
   {
     id: 2,
@@ -25,6 +29,8 @@ export const MOCK_PROJETOS: Projeto[] = [
       "[Qual problema o projeto resolve e o que você construiu, em uma ou duas frases.]",
     equipamento: ["[TECNOLOGIA]", "[TECNOLOGIA]", "[TECNOLOGIA]"],
     previw: "https://placehold.co/600x100",
+    linkGit: "",
+    linkProjeto: "",
   },
   {
     id: 3,
@@ -34,6 +40,8 @@ export const MOCK_PROJETOS: Projeto[] = [
       "[Qual problema o projeto resolve e o que você construiu, em uma ou duas frases.]",
     equipamento: ["[TECNOLOGIA]", "[TECNOLOGIA]", "[TECNOLOGIA]"],
     previw: "https://placehold.co/600x100",
+    linkGit: "",
+    linkProjeto: "",
   },
   {
     id: 4,
@@ -43,5 +51,7 @@ export const MOCK_PROJETOS: Projeto[] = [
       "[Qual problema o projeto resolve e o que você construiu, em uma ou duas frases.]",
     equipamento: ["[TECNOLOGIA]", "[TECNOLOGIA]", "[TECNOLOGIA]"],
     previw: "https://placehold.co/600x100",
+    linkGit: "",
+    linkProjeto: "",
   },
 ];
