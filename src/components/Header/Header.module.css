@@ -60,6 +60,7 @@
 @media (max-width: 768px) {
   .header {
     justify-content: center;
+    margin-bottom: 20px;
   }
 
   .header .linksContainer {
