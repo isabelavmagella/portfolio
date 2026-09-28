@@ -7,22 +7,23 @@ import { Personagem } from "./pages/Personagem/Personagem";
 import { Salvar } from "./pages/Salvar/Salvar";
 import { Correio } from "./pages/Correio/Correio";
 
+type Tela =
+  | "intro"
+  | "menu"
+  | "correio"
+  | "inventario"
+  | "personagem"
+  | "salvar"
+  | "missoes";
+
 function App() {
-  const [telaAtiva, setTelaAtiva] = useState<
-    | "intro"
-    | "menu"
-    | "correio"
-    | "inventario"
-    | "personagem"
-    | "salvar"
-    | "missoes"
-  >("intro");
+  const [telaAtiva, setTelaAtiva] = useState<Tela>("intro");
+
+  const voltarAoMenu = () => setTelaAtiva("menu");
 
   return (
     <>
-      {telaAtiva === "intro" && (
-        <Intro onAvancar={() => setTelaAtiva("menu")} />
-      )}
+      {telaAtiva === "intro" && <Intro onAvancar={voltarAoMenu} />}
 
       {telaAtiva === "menu" && (
         <MenuPrincipal
@@ -34,25 +35,15 @@ function App() {
         />
       )}
 
-      {telaAtiva === "missoes" && (
-        <Missoes onVoltar={() => setTelaAtiva("menu")} />
-      )}
+      {telaAtiva === "missoes" && <Missoes onVoltar={voltarAoMenu} />}
 
-      {telaAtiva === "inventario" && (
-        <Inventario onVoltar={() => setTelaAtiva("menu")}/>
-      )}
+      {telaAtiva === "inventario" && <Inventario onVoltar={voltarAoMenu} />}
 
-      {telaAtiva === "personagem" && (
-        <Personagem onVoltar={() => setTelaAtiva("menu")}/>
-      )}
+      {telaAtiva === "personagem" && <Personagem onVoltar={voltarAoMenu} />}
 
-      {telaAtiva === "salvar" && (
-        <Salvar onVoltar={() => setTelaAtiva("menu")}/>
-      )}
+      {telaAtiva === "salvar" && <Salvar onVoltar={voltarAoMenu} />}
 
-      {telaAtiva === "correio" && (
-        <Correio onVoltar={() => setTelaAtiva("menu")}/>
-      )}
+      {telaAtiva === "correio" && <Correio onVoltar={voltarAoMenu} />}
     </>
   );
 }
