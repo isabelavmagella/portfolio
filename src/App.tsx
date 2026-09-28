@@ -4,6 +4,7 @@ import { MenuPrincipal } from "./pages/MenuPrincipal/MenuPrincipal";
 import { Missoes } from "./pages/Missoes/Missoes";
 import { Inventario } from "./pages/Inventario/Inventario";
 import { Personagem } from "./pages/Personagem/Personagem";
+import { Salvar } from "./pages/Salvar/Salvar";
 
 function App() {
   const [telaAtiva, setTelaAtiva] = useState<
@@ -42,6 +43,10 @@ function App() {
 
       {telaAtiva === "personagem" && (
         <Personagem onVoltar={() => setTelaAtiva("menu")}/>
+      )}
+
+      {telaAtiva === "salvar" && (
+        <Salvar onVoltar={() => setTelaAtiva("menu")}/>
       )}
     </>
   );
