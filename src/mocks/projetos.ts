@@ -1,4 +1,4 @@
-export interface Projeto {
+interface Projeto {
   id: number;
   nome: string;
   status: "CONCLUÍDO" | "EM ANDAMENTO";
