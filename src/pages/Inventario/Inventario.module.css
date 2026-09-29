@@ -42,7 +42,7 @@
   background-color: transparent;
   border: none;
   box-shadow: var(--outline-purple);
-  font-family: var(--font-logo);
+  font-family: var(--font-pixel);
   cursor: pointer;
 }
 
@@ -79,7 +79,7 @@
 .detalhesFerramenta {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   max-width: 500px;
   padding: 20px;
   font-family: var(--font-logo);
