@@ -13,7 +13,7 @@ const ATRIBUTOS = [
   { nome: "IDIOMAS", valor: "Português [nativo], inglês [intermediário]" },
   {
     nome: "MISSÃO ATUAL",
-    valor: "[O que você busca agora: vaga, freelas, parcerias]",
+    valor: "Entrar para um time e pegar novos desafios. Aberta a vagas, freelas e parcerias, então se tem projeto, me chama.",
   },
 ];
 
