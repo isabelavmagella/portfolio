@@ -15,7 +15,7 @@ export function Intro({ onAvancar }: IntroProps) {
 
       <section
         id="intro-section"
-        className={`${styles.introSection} container`}
+        className={`${styles.introSection} container escalaTela`}
       >
         <h1>ISABELA MAGELLA</h1>
 

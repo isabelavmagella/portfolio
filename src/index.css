@@ -124,3 +124,39 @@ body {
     margin: auto;
   }
 }
+
+@media (min-width: 1536px) and (min-height: 936px) {
+  .escalaTela {
+    zoom: 1.2;
+  }
+}
+
+@media (min-width: 1792px) and (min-height: 1092px) {
+  .escalaTela {
+    zoom: 1.4;
+  }
+}
+
+@media (min-width: 2048px) and (min-height: 1248px) {
+  .escalaTela {
+    zoom: 1.6;
+  }
+}
+
+@media (min-width: 2304px) and (min-height: 1404px) {
+  .escalaTela {
+    zoom: 1.8;
+  }
+}
+
+@media (min-width: 2560px) and (min-height: 1560px) {
+  .escalaTela {
+    zoom: 2;
+  }
+}
+
+@media (min-width: 3200px) and (min-height: 1950px) {
+  .escalaTela {
+    zoom: 2.5;
+  }
+}
