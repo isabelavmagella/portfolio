@@ -81,18 +81,22 @@ function DetalhesProjeto({ indiceAtivo }: DetalhesProjetoProps) {
       </div>
 
       <div className={styles.detalhesAcoes}>
-        <a
-          href={projeto.linkGit}
-          className={styles.verCodigo}
-          rel="noopener noreferrer"
-        >
-          <IconeGithub aria-hidden="true" />
-          <span>VER CÓDIGO</span>
-        </a>
+        {projeto.linkGit && (
+          <a
+            href={projeto.linkGit}
+            className={styles.verCodigo}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <IconeGithub aria-hidden="true" />
+            <span>VER CÓDIGO</span>
+          </a>
+        )}
 
         <a
           href={projeto.linkProjeto}
           className={styles.linkProjeto}
+          target="_blank"
           rel="noopener noreferrer"
         >
           <IconeLinkExterno aria-hidden="true" />
