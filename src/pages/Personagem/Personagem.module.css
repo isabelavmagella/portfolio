@@ -57,7 +57,8 @@
 }
 
 .conteudoPainel .detalhesPersonagem .secaoAtributos .atributo .atributoValor {
-  font-size: 20px;
+  font-family: var(--font-pixel);
+  font-size: 14px;
 }
 
 .conteudoPainel .secaoHistoria .rotulo {
@@ -70,7 +71,8 @@
 }
 
 .conteudoPainel .secaoHistoria .textoHistoria {
-  font-size: 18px;
+  font-family: var(--font-pixel);
+  font-size: 14px;
 }
 
 /* ------------------------- RESPONSIVO ------------------------- */
