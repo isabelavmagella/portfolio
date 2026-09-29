@@ -1,4 +1,5 @@
 import styles from "./Salvar.module.css";
+import curriculo from "../../assets/arquivos/Curriculo_Isabela_Virginio_Magella.pdf";
 import { PaginaSessao } from "../../components/PaginaSessao/PaginaSessao";
 import {
   IconeDownload,
@@ -35,12 +36,18 @@ export function Salvar({ onVoltar }: SalvarProps) {
         <p className={styles.pergunta}>Salvar o currículo no seu dispositivo?</p>
 
         <div className={styles.acoes}>
-          <div className={styles.botaoConfirmar}>
+          <a
+            href={curriculo}
+            download="Curriculo_Isabela_Virginio_Magella.pdf"
+            className={styles.botaoConfirmar}
+          >
             <IconeDownload className={styles.iconeDownload} aria-hidden="true" />
             <p className={styles.textoConfirmar}>SIM, BAIXAR PDF</p>
-          </div>
+          </a>
 
-          <p className={styles.botaoCancelar}>NÃO, VOLTAR</p>
+          <button className={styles.botaoCancelar} onClick={onVoltar}>
+            NÃO, VOLTAR
+          </button>
         </div>
       </div>
     </PaginaSessao>

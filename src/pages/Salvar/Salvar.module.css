@@ -64,6 +64,8 @@
   background-color: var(--color-accent-gold);
   box-shadow: var(--outline-dark);
   padding: 10px 20px;
+  color: inherit;
+  text-decoration: none;
 }
 
 .conteudoPainel .botaoConfirmar svg {
@@ -74,6 +76,10 @@
   background-color: var(--color-text-light-translucent);
   box-shadow: var(--outline-light-translucent);
   padding: 10px 20px;
+  border: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
 }
 
 /* ------------------------- ANIMAÇÕES ------------------------- */
