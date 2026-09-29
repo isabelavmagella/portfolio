@@ -57,8 +57,7 @@ export function Personagem({ onVoltar }: PersonagemProps) {
               <span>▪</span> HISTÓRIA
             </p>
             <p className={styles.textoHistoria}>
-              [Conte em três ou quatro linhas como você começou a programar, o
-              que mais gosta de construir e o que te diferencia.]
+              Comecei a programar depois de ganhar um curso de lógica de programação, e gostei tanto que segui para um curso de fullstack. Hoje construo o produto completo, da tela ao servidor, e sigo treinando para melhorar ainda mais. Já entreguei um site do zero para um cliente, o que me ensinou a pensar no usuário, e não só no código.
             </p>
           </div>
         </div>
