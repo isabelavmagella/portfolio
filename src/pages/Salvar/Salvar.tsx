@@ -28,7 +28,7 @@ export function Salvar({ onVoltar }: SalvarProps) {
           <div className={styles.infoSlot}>
             <p className={styles.slotTitulo}>SLOT 1 • CURRÍCULO</p>
             <p className={styles.slotDetalhes}>
-              PDF • [nº de páginas] • atualizado em [MM/AAAA]
+              PDF • 1 página • atualizado em 08/2026
             </p>
           </div>
         </div>
