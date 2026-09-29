@@ -23,10 +23,6 @@ interface MissoesProps {
   onVoltar: () => void;
 }
 
-function classeStatus(status: string) {
-  return status === "CONCLUÍDO" ? styles.concluido : styles.emAndamento;
-}
-
 function ListarProjetos({ indiceAtivo, setIndiceAtivo }: ListarProjetosProps) {
   const propsDoBotao = useNavegacaoLista(MOCK_PROJETOS.length, setIndiceAtivo);
 
@@ -43,11 +39,6 @@ function ListarProjetos({ indiceAtivo, setIndiceAtivo }: ListarProjetosProps) {
       />
       <button className={styles.projetoBotao} {...propsDoBotao(index)}>
         <span className={styles.projetoNome}>{projeto.nome}</span>
-        <span
-          className={`${styles.projetoStatus} ${classeStatus(projeto.status)}`}
-        >
-          {projeto.status}
-        </span>
       </button>
     </li>
   ));
@@ -67,9 +58,6 @@ function DetalhesProjeto({ indiceAtivo }: DetalhesProjetoProps) {
 
       <div className={styles.detalhesHeader}>
         <h2>{projeto.nome}</h2>
-        <p className={`${styles.badgeStatus} ${classeStatus(projeto.status)}`}>
-          {projeto.status}
-        </p>
       </div>
 
       <div className={styles.detalhesSecao}>
