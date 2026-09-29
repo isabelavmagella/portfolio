@@ -116,17 +116,6 @@ function DetalhesFerramenta({ indiceAtivo }: DetalhesFerramentaProps) {
         <Rotulo texto="USO" />
         <p className={styles.textoUso}>{ferramenta.uso}</p>
       </div>
-
-      <div className={styles.secaoProjetos}>
-        <Rotulo texto="USADA EM" />
-        <div className={styles.listaProjetos}>
-          {ferramenta.usadaEm.map((projeto, i) => (
-            <p key={i} className={styles.projeto}>
-              {projeto}
-            </p>
-          ))}
-        </div>
-      </div>
     </div>
   ));
 }

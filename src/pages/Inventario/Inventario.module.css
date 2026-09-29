@@ -150,18 +150,6 @@
   color: var(--color-text-light);
 }
 
-.detalhesFerramenta .secaoProjetos .listaProjetos {
-  display: flex;
-  gap: 15px;
-}
-
-.detalhesFerramenta .secaoProjetos .projeto {
-  padding: 5px 20px;
-  color: var(--color-text-light);
-  background-color: var(--color-text-light-translucent);
-  box-shadow: var(--outline-light-translucent);
-}
-
 /* ------------------------- CONTROLES MENU ------------------------- */
 .grupoSetas {
   display: flex;
