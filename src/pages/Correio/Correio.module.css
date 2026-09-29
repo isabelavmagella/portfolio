@@ -15,7 +15,7 @@
 
 .conteudoPainel .rotulo {
   color: var(--color-text-light);
-  font-size: 12px;
+  font-size: 20px;
 }
 
 .conteudoPainel .rotulo span {
@@ -46,6 +46,8 @@
 
 .conteudoPainel .contato .contatoValor {
   color: var(--color-text-light);
+  font-family: var(--font-pixel);
+  letter-spacing: -1px;
 }
 
 /* ------------------------- RESPONSIVO ------------------------- */
