@@ -18,6 +18,7 @@ type Tela =
 
 function App() {
   const [telaAtiva, setTelaAtiva] = useState<Tela>("intro");
+  const [ultimoItemMenu, setUltimoItemMenu] = useState(0);
 
   const voltarAoMenu = () => setTelaAtiva("menu");
 
@@ -27,6 +28,8 @@ function App() {
 
       {telaAtiva === "menu" && (
         <MenuPrincipal
+          indiceInicial={ultimoItemMenu}
+          onAbrirItem={setUltimoItemMenu}
           onAvancarCorreio={() => setTelaAtiva("correio")}
           onAvancarInventario={() => setTelaAtiva("inventario")}
           onAvancarMissoes={() => setTelaAtiva("missoes")}

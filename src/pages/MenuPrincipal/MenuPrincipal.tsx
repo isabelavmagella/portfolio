@@ -1,5 +1,5 @@
 import styles from "./MenuPrincipal.module.css";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import flores from "../../assets/images/flores.webp";
 import { Header } from "../../components/Header/Header";
 import { ImagemFundo } from "../../components/ImagemFundo/ImagemFundo";
@@ -17,6 +17,8 @@ import {
 import { useNavegacaoLista } from "../../hooks/useNavegacaoLista";
 
 interface MenuPrincipalProps {
+  indiceInicial: number;
+  onAbrirItem: (indice: number) => void;
   onAvancarMissoes: () => void;
   onAvancarInventario: () => void;
   onAvancarPersonagem: () => void;
@@ -25,6 +27,8 @@ interface MenuPrincipalProps {
 }
 
 export function MenuPrincipal({
+  indiceInicial,
+  onAbrirItem,
   onAvancarMissoes,
   onAvancarCorreio,
   onAvancarInventario,
@@ -66,17 +70,25 @@ export function MenuPrincipal({
 
   const [indiceAtivo, setIndiceAtivo] = useState(0);
   const propsDoBotao = useNavegacaoLista(itens.length, setIndiceAtivo);
+  const listaRef = useRef<HTMLUListElement>(null);
+
+  useEffect(() => {
+    const botoes = listaRef.current?.querySelectorAll("button");
+    botoes?.[indiceInicial]?.focus();
+  }, [indiceInicial]);
 
   return (
     <TelaAnimada>
       <ImagemFundo src={flores} />
 
-      <div className={`${styles.menuPrincipal} container layoutCentralizado escalaTela`}>
+      <div
+        className={`${styles.menuPrincipal} container layoutCentralizado escalaTela`}
+      >
         <Header />
 
         <section className={`${styles.sectionMenu} sessao`}>
           <h2 className={styles.tituloMenu}>MENU</h2>
-          <ul className={styles.listaMenu}>
+          <ul className={styles.listaMenu} ref={listaRef}>
             {itens.map(({ titulo, subtitulo, Icone, onClick }, index) => (
               <li
                 key={titulo}
@@ -89,7 +101,10 @@ export function MenuPrincipal({
                 />
                 <button
                   className={styles.botaoMenu}
-                  onClick={onClick}
+                  onClick={() => {
+                    onAbrirItem(index);
+                    onClick();
+                  }}
                   {...propsDoBotao(index)}
                 >
                   <Icone />
