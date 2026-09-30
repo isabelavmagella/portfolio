@@ -166,6 +166,10 @@
   .sectionMenu .listaMenu .itemMenu {
     margin-bottom: 10px;
   }
+
+  .sectionMenu .listaMenu .itemMenu .botaoMenu {
+    padding:  0 0 0 45px;
+  }
   
   .sectionMenu .listaMenu .itemMenu .botaoMenu p {
     font-size: 20px;
@@ -177,5 +181,9 @@
 
   .controlesContainer {
     display: none;
+  }
+
+  .sectionMenu .listaMenu .itemMenu.ativo .botaoMenu {
+    padding: 0 0 0 20px;
   }
 }
